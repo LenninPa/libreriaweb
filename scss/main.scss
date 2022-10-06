@@ -1,0 +1,209 @@
+@use 'components/reset' as *;
+@use 'components/fonts' as *;
+@use 'components/colors' as *;
+@use 'components/mixins' as *;
+.container{
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	height: 50vh;
+	.container_Info{
+		padding: .5em;
+		width: 100%;
+		height: 50%;
+		display: flex;
+		position: relative;
+		background: $mainbackground;
+		.container_Info_Box{
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			position: relative;
+			.container_info_box_tititle{
+				@include titles;
+				padding: 0;
+				font-variant: all-small-caps;
+				font-weight: normal;
+				color: white;
+				width: 100%;
+				@media screen and (max-width: 320px) {
+					font-size: 2em;
+				}
+			}
+			.container_info_box_Description{
+				width: 100%;
+				color: $secondarybackground;
+				@include text;
+				.container_info_box_Description_link{
+					font-size: 1.5em;
+					color: #00d343;
+					transition: .5s;
+					position: relative;
+					padding:.2em 0;
+					&:after{
+						content: '';
+						background:#00d343;
+						width: 0%;
+						height: 5px;
+						position: absolute;
+						top: 100%;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						transition: .5s;
+					}	
+					&:hover::after{
+						transition: .5s;
+						width: 100%;
+					}
+
+				}
+			}
+		}
+	}
+	.container_img_center{/*Just ONE*/
+		width: 250px;
+		height: 250px;
+		position: absolute;	
+		right: 0;
+		bottom: 40%;
+		margin: auto;
+		@media screen and (max-width: 768px) {
+			width: 200px;
+			height: 200px;
+			bottom: 55%;
+		}@media screen and (max-width: 425px) {
+			width: 150px;
+			height: 150px;
+		}@media screen and (max-width: 320px) {
+			width: 125px;
+			height: 125px;
+		}	
+	}
+	.container_ShowCategories{
+		width: 100%;
+		height: 400px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		/*background-image: url("../img/colors.jpg");
+		background-size: 100%;
+		background-position: center;*/
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+		}
+		.container_ShowCategories_Bttn-M{
+			@include text;
+			font-size: 2.2em;
+			color: black;
+			font-weight: bold;
+			cursor: default;
+			@media screen and (min-width: 320px) {
+				font-size: 1em;
+
+			}
+		}
+		.container_ShowCategories_Bttn{
+			@include text;
+			text-transform: uppercase;
+			font-size: 2.2em;
+			color: $mainbackground;
+			font-weight: bold;
+			cursor: default;
+			position: relative;
+			margin: auto;
+			@media screen and (min-width: 320px) {
+				font-size: 1em;
+
+			}
+			
+		}
+	}/*FRONT CONTAINER*/
+}
+.container_Categories{
+	z-index: -100;
+	visibility: hidden;
+	opacity: 0;
+	overflow: hidden;
+	width: 100%;
+	background: $mainbackground;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	@media screen and (max-width: 768px) {
+		overflow: auto;
+		visibility: visible;
+	}
+
+	.container_Categories_BTTClose{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 7ch;
+		color: white;
+		font-family: century gothic;
+		cursor: pointer;
+		position: sticky;
+		z-index: 100;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		font-size: .8em;
+		padding: 0 1em;
+		background: $mainbackground;
+
+	}
+	.container_Categories_display{
+		width: 100%;
+		background: $mainbackground;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 1em;
+		.container_Categories_display_content{
+			position: relative;
+			
+			&:hover .container_Categories_display_Content_IO{
+				transition: .5s;
+				transform: scale(.9);
+				filter: brightness(35%);
+
+			}
+			&:hover .container_Categories_display_Content_IO_Titles{
+				transition: .5s;
+				opacity: 1;
+			}
+			.container_Categories_display_Content_IO{
+				width: 270px;
+				height: 270px;
+				transition: .5s;
+			}
+			.container_Categories_display_Content_IO_Titles{
+				@include titles;
+				opacity: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				position: absolute;
+				font-size: 2em;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				transition: .5s;
+				color: $secondarybackground;
+			}
+		}
+		
+	}
+}
