@@ -22,4 +22,5 @@ function CloseCat(){
 
 }
 
-close.addEventListener("click", CloseCat)
+close.addEventListener("click", CloseCat);
+let newValue = documentElement
