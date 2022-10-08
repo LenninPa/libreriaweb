@@ -2,18 +2,36 @@
 @use 'components/fonts' as *;
 @use 'components/colors' as *;
 @use 'components/mixins' as *;
+
+.video-wrapper{
+	z-index: -1;
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	text-align: center;
+	display: flex;
+  	align-items: center;
+  	justify-content: right;
+  	overflow: hidden;
+	.video{
+		position: absolute;
+		top: 0;
+
+	}
+}
 .container{
 	display: flex;
 	position: relative;
 	flex-direction: column;
-	height: 84vh;
+	height: 100vh;
+	background:opacify($lightblue, 0%);
 	.container_Info{
 		padding: .5em;
 		width: 100%;
 		height: 100%;
 		display: flex;
 		position: relative;
-		background: $mainbackground;
+		background: $lightblue;
 		.container_Info_Box{
 			width: 100%;
 			display: flex;
@@ -28,23 +46,24 @@
 				font-weight: normal;
 				color: white;
 				width: 100%;
+				font-size: 6em;
 				@media screen and (max-width: 320px) {
 					font-size: 2em;
 				}
 			}
 			.container_info_box_Description{
 				width: 100%;
-				color: $secondarybackground;
+				color: white;
 				@include text;
 				.container_info_box_Description_link{
-					font-size: 1.5em;
-					color: #00d343;
+					font-size: 2em;
+					color: $green;
 					transition: .5s;
 					position: relative;
 					padding:.2em 0;
 					&:after{
 						content: '';
-						background:#00d343;
+						background:$green;
 						width: 0%;
 						height: 5px;
 						position: absolute;
@@ -97,10 +116,10 @@
 		.container_ShowCategories_Bttn-M{
 			@include text;
 			font-size: 2.2em;
-			color: black;
+			color: white;
 			font-weight: bold;
 			cursor: default;
-			@media screen and (min-width: 320px) {
+			@media screen and (max-width: 320px) {
 				font-size: 1em;
 
 			}
@@ -108,13 +127,13 @@
 		.container_ShowCategories_Bttn{
 			@include text;
 			text-transform: uppercase;
-			font-size: 2.2em;
-			color: $mainbackground;
+			font-size: 2em;
+			color: $green;
 			font-weight: bold;
 			cursor: default;
 			position: relative;
 			margin: auto;
-			@media screen and (min-width: 320px) {
+			@media screen and (max-width: 320px) {
 				font-size: 1em;
 
 			}
@@ -125,10 +144,10 @@
 .container_Categories{
 	z-index: -100;
 	visibility: hidden;
-	opacity: 0;
+	opacity: 1;
 	overflow: hidden;
 	width: 100%;
-	background: $mainbackground;
+	background: $lightblue;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -156,12 +175,10 @@
 		right: 0;
 		font-size: .8em;
 		padding: 0 1em;
-		background: $mainbackground;
 
 	}
 	.container_Categories_display{
 		width: 100%;
-		background: $mainbackground;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
