@@ -3,6 +3,7 @@
 @use 'components/colors' as *;
 @use 'components/mixins' as *;
 body{
+	background: #000;
 	@media screen and (max-width: 480px) {
 		overflow-y: hidden;
 	}
