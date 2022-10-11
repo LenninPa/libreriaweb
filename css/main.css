@@ -250,19 +250,9 @@
   bottom: 0;
   translate: -100%;
   position: absolute;
-  overflow-y: auto;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-}
-.container_Categories::-webkit-scrollbar {
-  width: 0.7em;
-}
-.container_Categories::-webkit-scrollbar-track {
-  background: #0b0c1c;
-}
-.container_Categories::-webkit-scrollbar-thumb {
-  background: #303276;
 }
 .container_Categories .container_Categories_BTTClose {
   width: 100%;
