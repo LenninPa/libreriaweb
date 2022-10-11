@@ -2,7 +2,7 @@
 @use 'components/fonts' as *;
 @use 'components/colors' as *;
 @use 'components/mixins' as *;
-
+//El color verde fue lo ultimo que cambie
 @keyframes Shake {
 	0%{translate:-10px;}
 	25%{translate:10px;}
@@ -205,8 +205,8 @@ body{
 			
 			.container_Categories_display_Content_IO{
 				transition: .5s;
-				width: 165px;
-				height: 165px;
+				width: 175px;
+				height: 175px;
 				
 				@media screen and (max-width: 480px) {
 					width: 125px;

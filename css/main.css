@@ -127,7 +127,7 @@
 }
 .container .container_Info .container_Info_Box .container_info_box_Description .container_info_box_Description_link {
   font-size: 2.5em;
-  color: #287c2c;
+  color: #32db4a;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   position: relative;
@@ -135,7 +135,7 @@
 }
 .container .container_Info .container_Info_Box .container_info_box_Description .container_info_box_Description_link:after {
   content: "";
-  background: #287c2c;
+  background: #32db4a;
   width: 0%;
   height: 5px;
   position: absolute;
@@ -229,7 +229,7 @@
   z-index: 100;
   text-transform: uppercase;
   font-size: 2.2em;
-  color: #287c2c;
+  color: #32db4a;
   font-weight: bold;
   cursor: default;
   position: relative;
@@ -328,8 +328,8 @@
 .container_Categories .container_Categories_display .container_Categories_display_content .container_Categories_display_Content_IO {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  width: 165px;
-  height: 165px;
+  width: 175px;
+  height: 175px;
 }
 @media screen and (max-width: 480px) {
   .container_Categories .container_Categories_display .container_Categories_display_content .container_Categories_display_Content_IO {
