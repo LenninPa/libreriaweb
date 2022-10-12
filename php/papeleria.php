@@ -10,7 +10,7 @@
 <?php 
 	include 'headerpapeleria.php';
 ?>
-	<section class="container_products">
+	<section class="container_products" id="Cproducts">
 
 		<div class="container_products_content">
 			<img src="../img/escolar.png" class="container_products_content_img">

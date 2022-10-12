@@ -6,7 +6,7 @@
 
 			<div class="container_Categories_display_content">
 				<img src="../img/icon/papeleriaw.png" alt="Categorias" class="container_Categories_display_Content_IO">
-				<a href="php/papeleria.php" class="container_Categories_display_Content_IO_Titles">Papeleria</a>
+				<a href="papeleria.php" class="container_Categories_display_Content_IO_Titles">Papeleria</a>
 			</div>
 
 			<div class="container_Categories_display_content">

@@ -184,7 +184,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		.container_Categories_display_content{
-			padding: .5em;
+			padding: 1em;
 			position: relative;		
 			display: flex;
 			flex-direction: column;
@@ -229,10 +229,13 @@
 	width: 100%;
 	background: $lightblue;
 	text-align: center;
-
 	position: sticky;
 	top: 0;
 	z-index: 100;
+	@media screen and (max-width: 480px) {
+		display: flex;
+		flex-direction: column;
+	}
 	.header_title{	
 		@include titles;
 		font-size: 2em;
@@ -252,15 +255,14 @@
 	align-items: center;
 
 	background: $green;
-	&  .titles_container_title{
-		margin-right: auto;
-	}
+
 	.titles_container_backlink{
 		@include text;
 		font-variant: small-caps;
 		background: $lightblue;
 		color: white;
 		cursor: default;
+
 	}
 	.titles_container_title{
 		text-align: center;
@@ -268,10 +270,19 @@
 		@include text;
 		font-variant: small-caps;
 		cursor: default;
+		&:nth-child(2){
+			@include headerCT;
+			font-size: 1.4em;
 
-	}
+		}
+		&:nth-child(3){
+			background: $lightblue;
+			color: white;
+
+			}
+		}
 	
-}
+	}
 }
 
 	.container_products{
@@ -285,7 +296,7 @@
 		background: $lightblue;
 
 		.container_products_content{
-
+			border-radius: .5em;
 			background: white;
 			position: relative;
 			height: 285px;
@@ -295,13 +306,13 @@
 			margin:.2em; 
 			border-bottom:10px solid $green;
 			@media screen and (max-width: 480px) {
-				width: calc(50% - 1em);
+				width: calc(60% - 1em);
 				height: 285px;
 				
 			}
 			.container_products_content_img{
-				width: 50%;
-				height: 50%;
+				width: 65%;
+				height: 65%;
 				position: relative;
 			}
 			.container_products_content_info{
